@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zjj-vue</title>
+    <script src="./zvue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <p>{{content.value}}</p>
+        <p z-text="textContent"></p>
+        <p z-html="htmlContent"></p>
+        <button @click="textChange">textChange</button>
+    </div>
+    <script>
+        let vm = new ZVue({
+            el: "#app",
+            data: {
+                title: "zjj-vue",
+                content: {
+                    value: "哈佛耳温计foe我我见覅微积分鸡尾酒覅偶房间诶我记"
+                },
+                textContent:"zvue text",
+                htmlContent:"<span style='color:red'>html</span>"
+            },
+            methods:{
+                textChange(){
+                    this.textContent="计费文件佛今儿我放假textChange"
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
